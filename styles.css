@@ -1,0 +1,214 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 232, 232, 1); 
+    font-family: 'Poppins', sans-serif; /* Fonte global */
+}
+
+/* Tipografia */
+h1, h2, h3, p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h1 span {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1 span {
+    color: #F49051;
+    text-shadow: 0px 4px 4px rgba(244, 144, 81, 0.50);
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 60px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 span {
+    color: #F49051;
+    text-shadow: 0px 4px 4px rgba(244, 144, 81, 0.50);
+}
+
+.codigo-verificacao {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p {
+    font-size: 17px;
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Estilos de Seção */
+section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    flex: 1;
+    padding: 20px;
+}
+
+.cebola-section,
+.parabens-section,
+.otp-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.guri-section {
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Estilo de Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+}
+
+/* Estilo dos Inputs */
+input[type="email"],
+input[type="tel"] {
+    width: 210px;
+    height: 39px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(218, 217, 217, 0.29); 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+
+input[type="tel"] {
+    background-color: rgba(244, 144, 81, 0.15);
+    box-shadow: 0px 4px 4px rgba(244, 144, 81, 0.5);
+}
+
+/* Estilo dos Campos OTP */
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.otp-input {
+    width: 56px;
+    height: 54px;
+    border-radius: 20px;
+    border: 1px solid #C2C2C2;
+    background: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    outline: none;
+}
+
+.otp-input:focus {
+    border-color: #F49051;
+}
+
+/* Estilo dos Botões */
+a, .button {
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    width: 210px;
+    height: 39px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #F49051 0%, #F49051 95%);
+    box-shadow: 0px 9px 14px 0px rgba(244, 144, 81, 0.30);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 39px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #D77F40 0%, #D77F40 95%);
+}
+
+/* Estilo das Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 10px; 
+}
+
+.cebola-img {
+    width: 150px; 
+    height: auto; 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    h1, h2 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    .button, input[type="email"], input[type="tel"] {
+        width: 100%;
+    }
+
+    .otp-input {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    .otp-input {
+        width: 40px;
+        height: 40px;
+    }
+}

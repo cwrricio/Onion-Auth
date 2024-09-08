@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/cebolafeliz.png">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onion Auth</title>
+</head>
+<body>
+    <main>
+        <section class="cebola-section">
+            <img src="img/cebola.png" alt="cebola">
+            <h1>Onion <span>Auth</span></h1>
+            <div>
+                <h3>Verificação de OTP</h3>
+                <p>Insira seu e-mail e número de telefone para receber seu código de autentificação</p>
+            </div>
+            <form id="auth-form" action="/submit" method="POST">
+                <label for="email"><b>Email</b>:</label>
+                <input type="email" id="email" name="email" required>
+              
+                <label for="phone"><b>Telefone:</b></label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="button" class="button" onclick="redirect()">Continuar</button>
+            </form>
+        </section>
+
+        <section class="guri-section">
+            <h2>Proteja suas <span>Camadas!</span></h2>
+            <img src="img/guricebola.png" alt="guricebola">
+        </section>
+    </main>
+    
+    <script>
+        function redirect() {
+            window.location.href = 'verificacao.html';
+        }
+    </script>
+</body>
+</html>
