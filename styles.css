@@ -237,8 +237,8 @@ img {
     }
 
     .cebola-section img {
-        max-width: 80%; /* Reduz a largura máxima em dispositivos muito pequenos */
-        max-height: 40vh; /* Limita a altura para evitar corte */
+        max-width: 50%; /* Reduz a largura máxima em dispositivos muito pequenos */
+        max-height: 30vh; /* Limita a altura para evitar corte */
         object-fit: contain; /* Garante que a imagem seja redimensionada proporcionalmente */
     }
 }
