@@ -10,7 +10,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(247, 232, 232, 1); 
+    background-color: rgba(247, 232, 232, 1);
     font-family: 'Poppins', sans-serif; /* Fonte global */
 }
 
@@ -58,6 +58,7 @@ main {
     align-items: center;
     width: 80%;
     max-width: 1200px;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do container principal */
 }
 
 /* Estilos de Seção */
@@ -89,7 +90,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;
 }
 
 /* Estilo dos Inputs */
@@ -101,8 +102,8 @@ input[type="tel"] {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: rgba(218, 217, 217, 0.29); 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    background-color: rgba(218, 217, 217, 0.29);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 input[type="tel"] {
@@ -170,11 +171,14 @@ img {
     align-items: center; 
     gap: 10px; 
     margin-bottom: 10px; 
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    flex-wrap: wrap; /* Permite que as imagens quebrem a linha em telas pequenas */
 }
 
 .cebola-img {
-    width: 150px; 
-    height: auto; 
+    width: 100%; /* Ajusta a largura da imagem para 100% da largura do container */
+    max-width: 150px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Responsividade */
@@ -200,6 +204,10 @@ img {
         width: 48px;
         height: 48px;
     }
+
+    .cebola-img {
+        max-width: 120px; /* Ajuste a largura máxima para dispositivos menores */
+    }
 }
 
 @media (max-width: 480px) {
@@ -210,5 +218,9 @@ img {
     .otp-input {
         width: 40px;
         height: 40px;
+    }
+
+    .cebola-img {
+        max-width: 100px; /* Ajuste ainda mais a largura máxima para dispositivos muito pequenos */
     }
 }
