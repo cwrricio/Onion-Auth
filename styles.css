@@ -79,6 +79,11 @@ section {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites da seção */
+    min-height: 100vh; /* Garante que a seção ocupe no mínimo 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .guri-section {
@@ -227,9 +232,12 @@ img {
 
     .cebola-section {
         padding: 10px; /* Reduz ainda mais o padding em dispositivos muito pequenos */
+        min-height: 90vh; /* Ajusta a altura mínima para caber em telas menores */
     }
 
-    .cebola-img {
-        max-width: 100px; /* Ajusta ainda mais a largura máxima para dispositivos muito pequenos */
+    .cebola-section img {
+        max-width: 80%; /* Reduz a largura máxima em dispositivos muito pequenos */
+        max-height: 40vh; /* Limita a altura para evitar corte */
+        object-fit: contain; /* Garante que a imagem seja redimensionada proporcionalmente */
     }
 }
