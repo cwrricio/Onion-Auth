@@ -233,6 +233,7 @@ img {
     .cebola-section {
         padding: 10px; /* Reduz ainda mais o padding em dispositivos muito pequenos */
         min-height: 90vh; /* Ajusta a altura mínima para caber em telas menores */
+        margin-top: 20vh;
     }
 
     .cebola-section img {
